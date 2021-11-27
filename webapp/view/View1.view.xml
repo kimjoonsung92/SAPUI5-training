@@ -1,0 +1,74 @@
+<mvc:View
+    controllerName="KJS.zjs00018.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                        <!-- <Table items="{/data}" headerText="Carriers" mode="SingleSelectMaster" 
+                               selectionChange="onSelectionChange">
+                            <columns>
+                                <Column ><header><Text text="ID"/></header></Column>
+                                <Column ><header><Text text="Carrier name"/></header></Column>
+                                <Column ><header><Text text="Currency"/></header></Column>
+                                <Column ><header><Text text="Url"/></header></Column>
+                            </columns>
+                                <items>
+                                    <ColumnListItem >
+                                        <cells>
+                                            <Text text = "{carrier/carrId}"/>
+                                            <Text text = "{carrier/carrName}"/>
+                                            <Text text = "{carrier/currCode}"/>
+                                            <Text text = "{carrier/url}"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                        </Table> -->
+
+                        <!-- <ComboBox items="{/data}" selectionChange="onComboSelection">
+                                <items>
+                                    <core:Item text = "{carrier/carrId}"/>
+                                </items>
+                        </ComboBox> -->
+                        <core:Fragment id="comboFrag" fragmentName = "KJS.zjs00018.view.Combo" type="XML" />
+
+                        <Table id="idConnTable" items="{connections}" headerText="Flight connections" mode="SingleSelectMaster"
+                                selectionChange="onSelect">
+                            <columns>
+                                <Column ><header><Text text="Connection ID"/></header></Column>
+                                <Column ><header><Text text="City from"/></header></Column>
+                                <Column ><header><Text text="City to"/></header></Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem >
+                                    <cells>
+                                        <Text text = "{connId}"/>
+                                        <Text text = "{cityFrom}"/>
+                                        <Text text = "{cityTo}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                        <!-- <core:Fragment id="tableFrag" fragmentName="KJS.zjs00018.view.Flight" type="XML"/> -->
+
+                        <!-- <core:Fragment id="panelFrag" fragmentName = "KJS.zjs00018.view.Panel" type="XML" /> -->
+                        <Panel id="idPanel" headerText="Extra Data" width="50%">
+                            <Label text = "Connection ID"></Label>
+                            <Input value = "{connId}"></Input>
+                            <Label text = "City from"></Label>
+                            <Input value = "{cityFrom}"></Input>
+                            <Label text = "City to"></Label>
+                            <Input value = "{cityTo}"></Input>
+                        </Panel>
+                        
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

@@ -1,0 +1,18 @@
+<core:FragmentDefinition 
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+>
+    <l:HorizontalLayout>
+        <l:content>
+                        <Panel id="idPanel" headerText="Extra Data" width="50%">
+                            <Label text = "Connection ID"></Label>
+                            <Input value = "{connId}"></Input>
+                            <Label text = "City from"></Label>
+                            <Input value = "{cityFrom}"></Input>
+                            <Label text = "City to"></Label>
+                            <Input value = "{cityTo}"></Input>
+                        </Panel>
+        </l:content>
+    </l:HorizontalLayout>
+</core:FragmentDefinition>

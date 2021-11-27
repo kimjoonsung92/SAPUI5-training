@@ -1,0 +1,27 @@
+<core:FragmentDefinition 
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+>
+    <l:HorizontalLayout>
+        <l:content>
+                        <Table id="idConnTable" items="{connections}" headerText="Flight connections" mode="SingleSelectMaster"
+                                selectionChange="onSelect">
+                            <columns>
+                                <Column ><header><Text text="Connection ID"/></header></Column>
+                                <Column ><header><Text text="City from"/></header></Column>
+                                <Column ><header><Text text="City to"/></header></Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem >
+                                    <cells>
+                                        <Text text = "{connId}"/>
+                                        <Text text = "{cityFrom}"/>
+                                        <Text text = "{cityTo}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+        </l:content>
+    </l:HorizontalLayout>
+</core:FragmentDefinition>
